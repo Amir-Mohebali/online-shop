@@ -6,10 +6,12 @@ const CustomCheckBox = ({options, changePrice, changeOptions}) => {
     const optionList = Object.keys(options)
 
     useEffect(()=>{
+        // eslint-disable-next-line
         optionList.map((option)=> {
             const group = document.getElementsByName(option)
             group[0].checked = true
         })
+    // eslint-disable-next-line
     }, [])
     
     const handleOnChange = (event, optionType, optionValue) => {
